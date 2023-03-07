@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:id="@+id/gl_buttons"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gl2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_c"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#F15549"
+            android:text="@string/delete_bt" />
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="32dp"-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_open_bracket"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#A8A8A8"
+            android:text="@string/open_bracket_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_close_braket"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#A8A8A8"
+            android:text="@string/close_bracket_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_divide"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#FF9800"
+            android:text="@string/divide_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_7"
+            style="@style/Widget.Button.Style"
+            android:text="@string/seven_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_8"
+            style="@style/Widget.Button.Style"
+            android:text="@string/eight_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_9"
+            style="@style/Widget.Button.Style"
+            android:text="@string/nine_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_multiply"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#FF9800"
+            android:text="@string/multiply_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_4"
+            style="@style/Widget.Button.Style"
+            android:text="@string/four_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_5"
+            style="@style/Widget.Button.Style"
+            android:text="@string/five_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_6"
+            style="@style/Widget.Button.Style"
+            android:text="@string/six_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_add"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#FF9800"
+            android:text="@string/add_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_1"
+            style="@style/Widget.Button.Style"
+            android:text="@string/one_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_2"
+            style="@style/Widget.Button.Style"
+            android:text="@string/two_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_3"
+            style="@style/Widget.Button.Style"
+            android:text="@string/three_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_subtract"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#FF9800"
+            android:text="@string/subtract_bt" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_ac"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#F15549"
+            android:text="@string/delete_all_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_0"
+            style="@style/Widget.Button.Style"
+            android:text="@string/zero_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_dot"
+            style="@style/Widget.Button.Style"
+            android:text="@string/dot_bt" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_equal"
+            style="@style/Widget.Button.Style"
+            android:backgroundTint="#FF9800"
+            android:text="@string/equal_bt" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tvEquation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="end"
+        android:text="189+4"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvResult"
+        app:layout_constraintTop_toTopOf="@id/gl1"
+        tools:layout_editor_absoluteX="5dp" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:gravity="end"
+        android:text="190"
+        android:textColor="@color/black"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_buttons"
+        app:layout_constraintTop_toBottomOf="@+id/tvEquation" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
